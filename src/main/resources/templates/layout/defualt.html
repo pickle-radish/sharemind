@@ -1,4 +1,20 @@
 <!DOCTYPE html>
-<html lagn="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+    <!--공통 헤더-->
+    <th:block th:replace="fragments/head :: headFragment"></th:block>
+
+    <body>
+
+        <!--상단바-->
+        <th:block th:replace="fragments/topbar :: topbarFragment"></th:block>
+
+        <div>
+            <!--본문-->
+            <th:block layout:fragment="content"></th:block>
+
+        </div>
+
+    </body>
 
 </html>
